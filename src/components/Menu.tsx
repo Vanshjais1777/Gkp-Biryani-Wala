@@ -59,14 +59,13 @@ const Menu: React.FC = () => {
 
   return (
     <section id="menu" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-red-600">Menu</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Discover our carefully crafted selection of authentic Indian flavors, 
-            from aromatic biryanis to delightful cafe treats.
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Discover our carefully crafted selection of authentic Indian flavors, from aromatic biryanis to delightful cafe treats.
           </p>
           <button className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-red-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300">
             <Download className="w-5 h-5" />
@@ -74,28 +73,42 @@ const Menu: React.FC = () => {
           </button>
         </div>
 
+        {/* Mobile Dropdown */}
+        <div className="block md:hidden mb-6">
+          <select
+            onChange={(e) => setActiveCategory(e.target.value)}
+            value={activeCategory}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+          >
+            {menuData.map((cat) => (
+              <option key={cat.id} value={cat.id}>
+                {cat.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="hidden md:flex overflow-x-auto gap-3 mb-10 justify-center flex-wrap">
           {menuData.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-amber-500 to-red-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeCategory === category.id
+                ? 'bg-gradient-to-r from-amber-500 to-red-600 text-white shadow-lg'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
             >
               {category.name}
             </button>
           ))}
         </div>
 
-        {/* Menu Items */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Menu Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {activeMenu.items.map((item) => (
-            <div key={item.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
-              <div className="p-6">
+            <div key={item.id} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+              <div className="p-4 sm:p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div className="flex items-center gap-2">
                     {item.isVeg ? (
@@ -115,10 +128,10 @@ const Menu: React.FC = () => {
                     )}
                   </div>
                   <div className="text-right">
-                    <span className="text-2xl font-bold text-gray-900">₹{item.price}</span>
+                    <span className="text-xl font-bold text-gray-900">₹{item.price}</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.name}</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{item.name}</h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">{item.description}</p>
                 <button className="w-full bg-gradient-to-r from-amber-500 to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                   Add to Cart
@@ -131,25 +144,25 @@ const Menu: React.FC = () => {
         {/* Special Offers */}
         <div className="mt-16 bg-gradient-to-r from-amber-100 via-red-50 to-amber-100 rounded-2xl p-8">
           <div className="text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               <Flame className="inline w-8 h-8 text-red-600 mr-2" />
               Today's Special Offers
             </h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h4 className="text-lg font-bold text-amber-600 mb-2">Family Pack</h4>
                 <p className="text-gray-700">2 Biryanis + 4 Starters + 4 Drinks</p>
-                <p className="text-2xl font-bold text-gray-900 mt-2">₹899 <span className="text-sm text-gray-500 line-through">₹1199</span></p>
+                <p className="text-xl font-bold text-gray-900 mt-2">₹899 <span className="text-sm text-gray-500 line-through">₹1199</span></p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h4 className="text-lg font-bold text-amber-600 mb-2">Student Special</h4>
                 <p className="text-gray-700">Any Biryani + Drink + Dessert</p>
-                <p className="text-2xl font-bold text-gray-900 mt-2">₹199 <span className="text-sm text-gray-500 line-through">₹299</span></p>
+                <p className="text-xl font-bold text-gray-900 mt-2">₹199 <span className="text-sm text-gray-500 line-through">₹299</span></p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-md">
                 <h4 className="text-lg font-bold text-amber-600 mb-2">Weekend Combo</h4>
                 <p className="text-gray-700">Soya Biryani + Paneer 65 + Lassi</p>
-                <p className="text-2xl font-bold text-gray-900 mt-2">₹499 <span className="text-sm text-gray-500 line-through">₹599</span></p>
+                <p className="text-xl font-bold text-gray-900 mt-2">₹499 <span className="text-sm text-gray-500 line-through">₹599</span></p>
               </div>
             </div>
           </div>
