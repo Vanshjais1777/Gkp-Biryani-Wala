@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MapPin } from 'lucide-react';
+import logo from '../../assets/Biryani Wala.png';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,8 +24,8 @@ const Header: React.FC = () => {
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-lg'
-        : 'bg-gradient-to-b from-black/50 to-transparent'
+      ? 'bg-white/95 backdrop-blur-md shadow-lg'
+      : 'bg-gradient-to-b from-black/50 to-transparent'
       }`}>
       {/* Top Bar */}
       {/* <div className="bg-amber-500 text-white py-2 px-4 text-sm">
@@ -49,7 +50,7 @@ const Header: React.FC = () => {
       <nav className="px-4 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="assets/Biryani Wala.png" className='w-14 h-14' alt="" />
+            <img src={logo} className='w-14 h-14' alt="" />
             <div>
               <h1 className={`text-2xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
                 Biryani Wala
