@@ -1,6 +1,6 @@
 import React from 'react';
 import { Star, Clock } from 'lucide-react';
-import Manish from '../../assets/manish.png'; // Adjust if needed
+import Manish from '../../assets/Manish.png';
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
