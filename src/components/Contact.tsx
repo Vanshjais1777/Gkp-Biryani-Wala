@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Navigation } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,9 +13,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    toast.success('Thank you for your message! We will get back to you soon.');
     setFormData({
       name: '',
       email: '',
@@ -103,20 +102,9 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-gray-900 text-lg mb-1">Opening Hours</h4>
                   <div className="text-gray-600 space-y-1">
-                    <p><span className="font-medium">Monday - Friday:</span> 11:00 AM - 11:00 PM</p>
-                    <p><span className="font-medium">Saturday - Sunday:</span> 10:00 AM - 11:30 PM</p>
+                    <p><span className="font-medium">Monday - Saturday:</span> 11:00 AM - 8:00 PM</p>
                   </div>
-                  <p className="text-green-600 font-medium mt-2">🟢 Open Now</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Map */}
-            <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin className="w-12 h-12 mx-auto mb-2" />
-                <p>Interactive Map</p>
-                <p className="text-sm">Google Maps Integration</p>
               </div>
             </div>
           </div>

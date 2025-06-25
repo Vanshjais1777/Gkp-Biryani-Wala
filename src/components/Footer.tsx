@@ -92,12 +92,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-amber-400">Our Specialties</h4>
             <ul className="space-y-3">
-              <li className="text-gray-300">Hyderabadi Paneer Biryani</li>
-              <li className="text-gray-300">Lucknowi Soya Biryani</li>
-              <li className="text-gray-300">Paneer 65</li>
-              <li className="text-gray-300">Vegetable Biryani</li>
-              <li className="text-gray-300">Tandoori Specials</li>
-              <li className="text-gray-300">Masala Chai</li>
+              <li className="text-gray-300">Veg Biryani</li>
+              <li className="text-gray-300">Veg Manchurian</li>
+              <li className="text-gray-300">Paneer Chilly</li>
+              <li className="text-gray-300">Fried Rice</li>
+              <li className="text-gray-300">Noodles</li>
+              <li className="text-gray-300">Shakes</li>
             </ul>
           </div>
 
@@ -120,14 +120,13 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-amber-400 flex-shrink-0" />
-                <p className="text-gray-300 text-sm">info@biryaniwalagorakhpur.com</p>
+                <p className="text-gray-300 text-sm">manishgirig2856@gmail.com</p>
               </div>
               <div className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-amber-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm">
-                    Mon-Fri: 11 AM - 11 PM<br />
-                    Sat-Sun: 10 AM - 11:30 PM
+                    Mon-Sat: 11 AM - 8 PM<br />
                   </p>
                 </div>
               </div>

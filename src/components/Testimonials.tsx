@@ -6,45 +6,45 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: 'Priya Sharma',
-      rating: 5,
-      comment: 'Best biryani in Gorakhpur! The Hyderabadi Paneer biryani is absolutely divine. Perfect blend of spices and the rice is cooked to perfection.',
-      location: 'Civil Lines, Gorakhpur'
+      name: 'Ritesh Verma',
+      rating: 3,
+      comment: `I recently visited a food cafe and was pleasantly surprised by their fast food, which I'd rate 3/5. Although their biryani was just average at 2/5, the fast food was a highlight. However, the prices were surprisingly high, which made me question the overall value. Taking everything into account, I'd give the cafe an overall rating of 5/10.`,
+      location: ''
     },
     {
       id: 2,
-      name: 'Rahul Singh',
-      rating: 5,
-      comment: 'Amazing food and great ambiance! Perfect place for students like us. The prices are reasonable and the taste is incredible. Paneer 65 is a must-try!',
-      location: 'University Area, Gorakhpur'
+      name: 'D Sharma',
+      rating: 3,
+      comment: `Visited this fast food restaurant recently and had a great experience! The dishes were delicious and the workers were friendly. Highly recommend trying out their menu - you won't be disappointed! Good food, good vibes!`,
+      location: ''
     },
     {
       id: 3,
-      name: 'Anita Gupta',
-      rating: 4,
-      comment: 'Lovely family restaurant with authentic flavors. We ordered the family pack and everyone loved it. The service is quick and staff is very courteous.',
-      location: 'Golghar, Gorakhpur'
+      name: 'Sanjay Srivastava',
+      rating: 5,
+      comment: 'आप का बिरयानी पनीर चिल्ली खाया बहुत लाजवाब था।',
+      location: ''
     },
     {
       id: 4,
-      name: 'Vikash Kumar',
+      name: 'Imamuddin shaikh Sonu',
       rating: 5,
-      comment: 'Outstanding food quality! The Soya biryani reminds me of my grandmother\'s cooking. Truly feels like home. Will definitely visit again.',
-      location: 'Railway Station Area'
+      comment: 'Amazing test Best food in best price level',
+      location: ''
     },
     {
       id: 5,
-      name: 'Neha Agarwal',
+      name: 'Mohd Maroof',
       rating: 5,
-      comment: 'Great vegetarian options too! The paneer biryani and masala chai are exceptional. Perfect spot for catching up with friends.',
-      location: 'Park Road, Gorakhpur'
+      comment: `Veg biryani is a delicious Indian dish made with basmati rice, assorted vegetables, and a blend of aromatic spices. It's typically cooked with layers of flavors and often served with raita (yogurt sauce) or mirchi ka salan (spicy gravy). Would you like a recipe or more information about veg biryani`,
+      location: ''
     },
     {
       id: 6,
       name: 'Amit Verma',
       rating: 4,
       comment: 'Excellent delivery service and the food arrived hot and fresh. The packaging is also very good. Highly recommended for office orders.',
-      location: 'BRD Medical College Area'
+      location: ''
     }
   ];
 
@@ -52,9 +52,8 @@ const Testimonials: React.FC = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <Star
         key={index}
-        className={`w-5 h-5 ${
-          index < rating ? 'text-amber-400 fill-current' : 'text-gray-300'
-        }`}
+        className={`w-5 h-5 ${index < rating ? 'text-amber-400 fill-current' : 'text-gray-300'
+          }`}
       />
     ));
   };
@@ -67,36 +66,9 @@ const Testimonials: React.FC = () => {
             What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-red-600">Customers Say</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from our satisfied customers 
+            Don't just take our word for it - hear from our satisfied customers
             who have experienced the authentic flavors of Biryani Wala.
           </p>
-        </div>
-
-        {/* Overall Rating */}
-        <div className="text-center mb-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg inline-block">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="flex">
-                {renderStars(5)}
-              </div>
-              <span className="text-3xl font-bold text-gray-900">4.8</span>
-            </div>
-            <p className="text-gray-600 text-lg">Based on 500+ reviews</p>
-            <div className="flex justify-center gap-8 mt-4 text-sm">
-              <div className="text-center">
-                <div className="font-bold text-2xl text-green-600">95%</div>
-                <div className="text-gray-600">Food Quality</div>
-              </div>
-              <div className="text-center">
-                <div className="font-bold text-2xl text-blue-600">92%</div>
-                <div className="text-gray-600">Service</div>
-              </div>
-              <div className="text-center">
-                <div className="font-bold text-2xl text-purple-600">89%</div>
-                <div className="text-gray-600">Value</div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Testimonials Grid */}
@@ -126,12 +98,9 @@ const Testimonials: React.FC = () => {
               Share your experience and help others discover the taste of authentic biryani!
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="bg-white text-amber-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <a href='https://www.google.com/search?sca_esv=a135fd767cff278f&sxsrf=AE3TifOlC_CF-m6Z9HMUgrbpLchbk0jUaQ:1750877185450&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E9-splBn02FLl-jFr_n-Zp8hPunw2CNnTTo45329qDQvn52k39io-4fCMXaMY6Bfj_nI3cjTKLwn5gSxnyAymYDM5vLR&q=Biryani+Wala+Reviews&sa=X&ved=2ahUKEwjvobzlnY2OAxWHsFYBHc2MAvcQ0bkNegQIJBAD&biw=1396&bih=632&dpr=1.38' className="bg-white text-amber-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                 Write a Review
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-amber-600 transition-all duration-300">
-                Share on Social Media
-              </button>
+              </a>
             </div>
           </div>
         </div>

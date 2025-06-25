@@ -23,6 +23,14 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        {/* Namaste Image */}
+        <div className="mb-4 flex justify-center">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png"
+            alt="Namaste"
+            className="w-20 h-20 mx-auto animate-fade-in"
+          />
+        </div>
         <div className="mb-6">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-fade-in">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">
@@ -39,11 +47,11 @@ const Hero: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-6 mb-8">
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2">
             <Star className="w-5 h-5 text-amber-400 fill-current" />
-            <span>4.8 Rating</span>
+            <span>4.0 Rating</span>
           </div>
           <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2">
             <Clock className="w-5 h-5 text-green-400" />
-            <span>11 AM - 11 PM</span>
+            <span>11 AM - 8 PM</span>
           </div>
         </div>
 
