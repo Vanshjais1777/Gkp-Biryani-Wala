@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/Biryani Wala.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Biryani Wala Gorakhpur - Authentic Indian Biryani & Cafe. Flavor That Feels Like Home. Best biryani restaurant in Gorakhpur serving Hyderabadi Paneer biryani, Soya biryani, and cafe-style snacks." />
+    <meta name="keywords" content="biryani, restaurant, gorakhpur, indian food, Veg biryani, Paneer biryani, Soya biryani, cafe, food delivery" />
+    <meta name="author" content="Biryani Wala Gorakhpur" />
+    <title>Biryani Wala Gorakhpur - Authentic Indian Biryani & Cafe | Flavor That Feels Like Home</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Biryani Wala Gorakhpur - Authentic Indian Biryani & Cafe" />
+    <meta property="og:description" content="Experience the best biryani in Gorakhpur. Authentic flavors that feel like home. Order now for quick delivery!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    
+    <!-- Custom CSS for animations -->
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animate-fade-in {
+        animation: fade-in 1s ease-out;
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Loading animation for images */
+      img {
+        transition: opacity 0.3s ease;
+      }
+      
+      img:not([src]):not([srcset]) {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
